@@ -64,7 +64,7 @@ Os erros seguem o formato `ProblemDetail` (RFC 9457):
 mvn test
 ```
 
-Os testes não dependem de internet: o cliente HTTP é substituído por um mock.
+Os testes não dependem de internet: o cliente HTTP é substituído por dados mock.
 
 ## Estrutura
 
@@ -78,8 +78,3 @@ src/main/java/com/example/conversor
 └── exception/                      # exceções + tratamento global de erros
 ```
 
-## Ideias para evoluir
-
-- Cache da cotação (`spring-boot-starter-cache` + Caffeine) para não chamar a API a cada request.
-- Endpoint de histórico (`/v1/{data}` e séries temporais da Frankfurter).
-- Documentação automática com springdoc-openapi (Swagger UI).
