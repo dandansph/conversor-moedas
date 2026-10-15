@@ -24,7 +24,6 @@ public class ConversorController {
         this.service = service;
     }
 
-    /** Exemplo: GET /api/converter?de=USD&para=BRL&valor=100 */
     @GetMapping("/converter")
     public ConversaoResponse converter(
             @RequestParam
@@ -42,7 +41,6 @@ public class ConversorController {
         return service.converter(de, para, valor);
     }
 
-    /** Exemplo: GET /api/moedas */
     @GetMapping("/moedas")
     public Map<String, String> moedas() {
         return service.listarMoedas();
