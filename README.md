@@ -5,13 +5,19 @@ API REST que converte valores entre moedas consumindo a API pública e gratuita
 
 **Stack:** Java 17+, Spring Boot 3.3, Spring Web, Bean Validation, Maven.
 
+Inclui um **frontend** responsivo (HTML/CSS/JS puro, sem build) servido pelo próprio Spring Boot:
+conversão automática ao digitar, seletor de moedas com busca e bandeiras, botão de inverter,
+pares populares e histórico das últimas conversões.
+
 ## Como rodar
+
+Pré-requisitos: Java 17+ e Maven.
 
 ```bash
 mvn spring-boot:run
 ```
 
-A aplicação sobe em `http://localhost:8080`.
+Abra **http://localhost:8080** no navegador. A API fica em `http://localhost:8080/api`.
 
 ## Endpoints
 
@@ -76,5 +82,7 @@ src/main/java/com/example/conversor
 ├── client/FrankfurterClient        # chamada HTTP à API externa (RestClient)
 ├── dto/                            # records de entrada/saída
 └── exception/                      # exceções + tratamento global de erros
+
+src/main/resources/static           # frontend (index.html, css/, js/)
 ```
 
